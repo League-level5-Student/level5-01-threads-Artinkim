@@ -13,9 +13,9 @@ public class ThreadedReverseGreeting {
 	static int x = 0;
 	static void m() {
 		if(x<=50) {
-			x++;
 			int n = x;
 			Thread t = new Thread(()->System.out.println("Hello from thread "+ n));
+			x++;
 			m();
 			t.start();
 		}
